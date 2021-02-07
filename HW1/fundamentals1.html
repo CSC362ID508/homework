@@ -1,0 +1,27 @@
+<!-- This is the code for the first HTML file in HW1 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentals 1</title>
+  </head>
+  <body>
+    <svg id="chart" width="600" height="300"></svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      function factors(num) {
+        var arr = new Array();
+        for (i = num; i > 0; i--) {
+          if (num % i == 0) {
+            arr.push(i);
+          }
+        }
+        return arr;
+      }
+      var arr = factors(24);
+      for (i = 0; i < arr.length; i++) {
+        d3.select("#chart").append("circle").attr("r", arr[i]).attr("cy", 100).attr("cx", arr[i] * 10).style("stroke", "red");
+      }
+    </script>
+  </body>
+</html>
