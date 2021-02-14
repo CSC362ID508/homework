@@ -1,0 +1,56 @@
+<!-- Jordan Reed -->
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+    .red {
+        color: white;
+        background-color: #e41a1c;
+    }
+    .green {
+        color: #4daf4a;
+    }
+    .blue {
+        color: white;
+        background-color: #377eb8;
+    }
+    .purple {
+        color: #984ea3;
+    }
+  </style>
+
+  <script>
+    //your code goes here
+    const firstDiv = d3.select("#header").classed("red", true);
+    const secondDiv = d3.select("#nominal").classed("green", true);
+    const thirdDiv = d3.select("#ordinal").classed("blue", true);
+    const forthDiv = d3.select("#interval").classed("purple", true);
+    const fifthDiv = d3.select("#ratio").classed("purple", true);
+
+    firstDiv.text("Hello, this is how we are accessing different elements in the DOM");
+    secondDiv.append("h1").text("Nominal");
+    secondDiv.append("p").text("Nominal data type is when the data has no order or ranking.");
+    secondDiv.append("p").text("An example would be Race.");
+
+    thirdDiv.append("h1").text("Ordinal");
+    thirdDiv.append("p").text("Ordinal data type is when the data has order but no conceptual difference between levels");
+    thirdDiv.append("p").text("An example would be a performance survey");
+
+    forthDiv.append("h1").text("Interval");
+    forthDiv.append("p").text("Interval data type is when the data has a numerical value where distance between intervals can be calculated. But there is no true zero.");
+    forthDiv.append("p").text("An example would be tempature");
+
+    fifthDiv.append("h1").text("Ratio");
+    fifthDiv.append("p").text("Ratio data type is similar to interval but ratio has a true zero.");
+    fifthDiv.append("p").text("An exampple would be height");
+
+  </script>
+
+</body>
